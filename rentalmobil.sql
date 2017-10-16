@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 16 Okt 2017 pada 18.36
+-- Generation Time: 16 Okt 2017 pada 20.21
 -- Versi Server: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -50,7 +50,10 @@ INSERT INTO `user` (`idUser`, `namaUser`, `role`, `emailUser`, `passwordUser`, `
 (5, '', '', '', '', '0', '0'),
 (6, '', '', '', '', '0', '0'),
 (7, 'endar', '', 'sas', 'asdas', '0', '0'),
-(8, 'qweqwe', '', 'qweqwe', 'qweqwe', 'qweqwe', 'qweqwe');
+(8, 'qweqwe', '', 'qweqwe', 'qweqwe', 'qweqwe', 'qweqwe'),
+(9, 'asd', '', 'asd', 'asd', 'asda', 'asdasd'),
+(10, '', '', '', '', '', ''),
+(11, 'coba', '', 'cobasaja@gmail.com', '12345', 'surabaya', 'mahasiswa');
 
 --
 -- Indexes for dumped tables
@@ -70,7 +73,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;COMMIT;
+  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

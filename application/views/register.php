@@ -7,6 +7,7 @@
         <link href="<?php echo base_url()."assets/vendor/bootstrap/css/bootstrap.css"; ?>" rel="stylesheet">
         <link href="<?php echo base_url()."assets/vendor/css/rental.css"; ?>" rel="stylesheet">
     </head>
+    <title>RENTAL | Register</title>
     <body class="login">
         <nav></nav>
         <br><br><jumbotron><h1 class="text-center"><strong>REG</strong>ISTER</h1></jumbotron><br><br>
@@ -19,20 +20,34 @@
                                 <div class="form-group">
                                     <!--<h6><label class="col-md-3 control-label" for="textinput">Email</label></h6>
                                     <div class="col-md-9">-->
-                                        <input  name="nama" type="text" placeholder="Nama" class="form-control input-md" >
+                                        <input  name="nama" type="text" placeholder="Nama" class="form-control input-md" required> 
                                 </div>
                                 <div class="form-group">
                                     <!--<h6><label class="col-md-3 control-label" for="textinput">Email</label></h6>
                                     <div class="col-md-9">-->
-                                        <input  name="email" type="text" placeholder="Email" class="form-control input-md" >
+                                        <input  name="email" type="text" placeholder="Email" class="form-control input-md" required>
                                 </div>
                                 
                                 <div class="form-group">
                                     <!--<h6><label class="col-md-3 control-label" for="textinput">Password</label></h6>
                                     <div class="col-md-9">-->
-                                        <input  name="password" type="password" placeholder="Password" class="form-control input-md" >
+                                        <input  name="password" type="password" placeholder="Password" class="form-control input-md" required>
                                     
-                                </div><br><br>
+                                </div>
+
+                                 <div class="form-group">
+                                    <!--<h6><label class="col-md-3 control-label" for="textinput">Email</label></h6>
+                                    <div class="col-md-9">-->
+                                        <input  name="alamat" type="text" placeholder="Alamat" class="form-control input-md" required>
+                                </div>
+
+                                 <div class="form-group">
+                                    <!--<h6><label class="col-md-3 control-label" for="textinput">Email</label></h6>
+                                    <div class="col-md-9">-->
+                                        <input  name="pekerjaan" type="text" placeholder="Pekerjaan" class="form-control input-md" required>
+                                </div>
+
+                                <br>
                                 <h6 style="color: red"><?php echo $this->session->flashdata('error');?></h6>
                                 <br>
 

@@ -15,9 +15,9 @@
             <div class="container">
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
-                    <?php echo form_open_multipart('User/login/'); ?>
+                    <?php echo form_open_multipart('user/login/'); ?>
                             
-                    <br><p class="text-center"><a href="<?php echo base_url()."index.php/User/regview";?>"><span>Buat sekarang</span></a></p>
+                    <br><p class="text-center"><a href="index.php/user/logout"><span>LogOut</span></a></p>
                 </div>
                 <div class="col-md-4"></div>
             </div>

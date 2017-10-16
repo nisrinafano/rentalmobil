@@ -52,6 +52,7 @@ class User extends CI_Controller {
                     'alamatUser' => $this->input->post('alamat'),
                     'pekerjaanUser' => $this->input->post('pekerjaan')
                 );
+            
                 $this->User_model->addUser($data);
                 redirect('User');
                 echo 'Selamat anda berhasil melakukan register';
@@ -59,5 +60,11 @@ class User extends CI_Controller {
                 $datauser['datauser'] = $this->User_model->getDataUser();
                 $this->load->view('register', $datauser);
             }
+    }
+
+    public function Logout()
+    {
+        $this->session->sess_destroy();
+        redirect('login');
     }
 }

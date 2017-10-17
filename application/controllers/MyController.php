@@ -48,14 +48,19 @@ class MyController extends CI_Controller {
 		$data = $this->My_Model->getBrg();  
 		$this->load->view('tables', array('data' => $data)); 
 	} 
-	function getDetail($idbrg){
-		$data = $this->My_Model->getDtl($idbrg);  
+	function getDetail($idKendaraan=NULL){
+		if (!isset($idKendaraan)) {
+                    echo 'tidak ditemukan';
+                }else {
+            
+                $data = $this->My_Model->getDtl($idKendaraan);  
 		$this->load->view('web/single1', array('data' => $data)); 
-	}
-	function getDetail1($namabrg){
+            }
+        }
+	function getDetail1($namaKendaraan){
 		$data = $this->My_Model->getBrg(); 
-		$data1 = array('gambarbrg' => [0][$gambarbrg],
-						'namabrg' => [0][$namabrg] );
+		$data1 = array('fotoKendaraan' => [0][$fotoKendaraan],
+						'namaKendaraan' => [0][$namaKendaraan] );
 		$this->load->view('web/single1', array('data1' => $data1)); 
 	}
 
@@ -64,16 +69,16 @@ class MyController extends CI_Controller {
 		$this->load->view('web/contact',$data);
 	}
 	function contactUs(){
-	$data = array( 
-	'nama' => $this->input->post('nama'),
-	'email' => $this->input->post('email'),  
-	'judul' => $this->input->post('judul'),
-	'isi' => $this->input->post('isi'),
-	'tglContact' => date("Y-m-d H:i:s")		
+                $data = array( 
+                'nama' => $this->input->post('nama'),
+                'email' => $this->input->post('email'),  
+                'judul' => $this->input->post('judul'),
+                'isi' => $this->input->post('isi'),
+                'tglContact' => date("Y-m-d H:i:s")		
 	);
 	
-	$this->My_Model->addContact($data);   
-	$this->createContact();
+                $this->My_Model->addContact($data);   
+                $this->createContact();
 	}
 
 	function createOrder() {   
@@ -86,18 +91,16 @@ class MyController extends CI_Controller {
 	'email' => $this->input->post('email'),  
 	'alamat' => $this->input->post('alamat'),
 	'nohp' => $this->input->post('nohp'),
-	'pesanan' => $this->input->post('pesanan'),
-	'tglOrder' => date("Y-m-d H:i:s")
+	'noktp' => $this->input->post('noktp'),
+	'namakendaraan' => $this->input->post('namakendaraan'),
+	'jumlahkendaraan' => $this->input->post('jumlahkendaraan'),
+	'durasipeminjaman' => $this->input->post('durasipeminjaman')
 	);
 	
 	$this->My_Model->addOrder($data);   
 	$this->createOrder();
 	}
-
-	function createAccount() {   
-		$data['err_message']="";
-		$this->load->view('signup',$data);
-	}
+	
 	function createUser(){
 	$data = array( 
 	'first' => $this->input->post('first'),
@@ -142,19 +145,19 @@ class MyController extends CI_Controller {
 
     function create() {
 		$img=$this->upload->data();
-		$gambarbrg=$img['file_name'];
+		$fotoKendaraan=$img['file_name'];
 		$gambarbrg_model=$img['file_name'];
 
 		$data = array(
-			'idbrg' => $this->input->post('idbrg'),
-			'jenisbrg' => $this->input->post('jenisbrg'),
-			'namabrg' => $this->input->post('namabrg'),
-			'hargabrg' => $this->input->post('hargabrg'),
-			'ukuranbrg' => $this->input->post('ukuranbrg'),
-			'warnabrg' => $this->input->post('warnabrg'),
-			'satuanbrg' => $this->input->post('satuanbrg'),
-			'deskripsibrg' => $this->input->post('deskripsibrg'),
-			'gambarbrg' => $gambarbrg,
+			'idKendaraan' => $this->input->post('idKendaraan'),
+			'merkKendaraan' => $this->input->post('merkKendaraan'),
+			'namaKendaraan' => $this->input->post('namaKendaraan'),
+			'hargaSewa' => $this->input->post('hargaSewa'),
+			
+			'nopolKendaraan' => $this->input->post('nopolKendaraan'),
+			'idPemilik' => $this->input->post('idPemilik'),
+			
+			'fotoKendaraan' => $fotoKendaraan,
 			'gambarbrg_model' => $gambarbrg_model
 		);
 		$this->My_Model->adminAdd($data);
@@ -163,13 +166,11 @@ class MyController extends CI_Controller {
   	$this->load->library('upload');
    	$config['upload_path'] = './upload/';
    	$config['allowed_types'] = 'gif|jpg|png';
-	   // $config['max_size'] = 100000;
-	   // $config['max_width'] = 10000;
-	   // $config['max_height'] = 10000;
+	   
 
   		$this->upload->initialize($config);
 
-   		if ( ! $this->upload->do_upload('gambarbrg')||! $this->upload->do_upload('gambarbrg_model')) {
+   		if ( ! $this->upload->do_upload('fotoKendaraan')||! $this->upload->do_upload('gambarbrg_model')) {
    			echo $this->upload->display_errors();
     		echo "gagal upload";
    		} else {
@@ -180,38 +181,38 @@ class MyController extends CI_Controller {
 
 	function updateKatalog(){
 		$img=$this->upload->data();
-		$gambarbrg=$img['file_name'];
+		$fotoKendaraan=$img['file_name'];
 		$gambarbrg_model=$img['file_name'];
 
 		$brg = $this->My_Model->getBrg();
 		$data= array(
-			"idbrg"=> $brg[0]['idbrg'],
-			"jenisbrg"=> $brg[0]['jenisbrg'],
-			"namabrg"=> $brg[0]['namabrg'],
-			"hargabrg"=> $brg[0]['hargabrg'],
-			"ukuranbrg"=> $brg[0]['ukuranbrg'],
-			"warnabrg"=> $brg[0]['warnabrg'],
-			"satuanbrg"=> $brg[0]['satuanbrg'],
-			"deskripsibrg"=> $brg[0]['deskripsibrg'],
-			'gambarbrg' => $gambarbrg,
+			"idKendaraan"=> $brg[0]['idKendaraan'],
+			"merkKendaraan"=> $brg[0]['merkKendaraan'],
+			"namaKendaraan"=> $brg[0]['namaKendaraan'],
+			"hargaSewa"=> $brg[0]['hargaSewa'],
+			
+			"nopolKendaraan"=> $brg[0]['nopolKendaraan'],
+			"idPemilik"=> $brg[0]['idPemilik'],
+			
+			'fotoKendaraan' => $fotoKendaraan,
 			'gambarbrg_model' => $gambarbrg_model
 			);
 		$this->load->view('edit',$data);
 	}
 	function doUpdate(){
 		$data=array(
-			'idbrg'=>$this->input->post('idbrg'),
-			'jenisbrg'=>$this->input->post('jenisbrg'),
-			'namabrg'=>$this->input->post('namabrg'),
-			'hargabrg'=>$this->input->post('hargabrg'),
-			'ukuranbrg'=>$this->input->post('ukuranbrg'),
-			'warnabrg'=>$this->input->post('warnabrg'),
-			'satuanbrg'=>$this->input->post('satuanbrg'),
-			'deskripsibrg'=>$this->input->post('deskripsibrg'),
-			'gambarbrg' => $gambarbrg,
+			'idKendaraan'=>$this->input->post('idKendaraan'),
+			'merkKendaraan'=>$this->input->post('merkKendaraan'),
+			'namaKendaraan'=>$this->input->post('namaKendaraan'),
+			'hargaSewa'=>$this->input->post('hargaSewa'),
+			
+			'nopolKendaraan'=>$this->input->post('nopolKendaraan'),
+			'idPemilik'=>$this->input->post('idPemilik'),
+			
+			'fotoKendaraan' => $fotoKendaraan,
 			'gambarbrg_model' => $gambarbrg_model
 			);
-		$where = array('idbrg'=>$this->input->post('idbrg'));
+		$where = array('idKendaraan'=>$this->input->post('idKendaraan'));
 		$upd = $this->My_Model->updateBrg('katalog',$data,$where);
 		if($upd>1){
 			$data = $this->My_Model->getBrg();

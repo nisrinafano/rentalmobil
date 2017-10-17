@@ -21,6 +21,7 @@ class Controller_test extends TestCase {
                 'pass' => 'admin',
                 
                 ]
+             
         );
       //  $this->assertRedirect('login');
         $this->assertContains('<title>RENTAL MOBIL | Read Katalog</title>', $output);

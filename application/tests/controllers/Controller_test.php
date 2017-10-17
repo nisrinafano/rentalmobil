@@ -27,6 +27,67 @@ class Controller_test extends TestCase {
         $this->assertContains('<title>RENTAL MOBIL | Read Katalog</title>', $output);
     }
     
+    public function test_login1 (){
+         $output = $this->request(
+                'POST', ['MyController', 'createUser'], [
+                            
+                'first' => 'endar',  
+                'last' => 'sasmito',
+                'nohp' => '12213123',
+                'email' => 'endar@gmail.com',
+                'jeniskelamin' => 'Male',
+                'username' => 'admin123',
+                'pass' => 'admin123',
+            ]
+                  
+        );
+        $this->assertContains('<title>Sign Up</title>', $output);
+        $this->request(
+                'POST',['MyController','login'],
+                ['username' => 'admin123',
+                'pass' => 'admin12',
+                ]
+            );
+         $this->request(
+                'POST',['MyController','login'],
+                ['username' => 'admin123',
+                'pass' => 'admin12',
+                ]
+            );
+          $this->request(
+                'POST',['MyController','login'],
+                ['username' => 'admin123',
+                'pass' => 'admin12',
+                ]
+            );
+               
+    }  
+    
+    public function test_login2 (){
+         $output = $this->request(
+                'POST', ['MyController', 'createUser'], [
+                            
+                'first' => 'endar',  
+                'last' => 'sasmito',
+                'nohp' => '12213123',
+                'email' => 'endar@gmail.com',
+                'jeniskelamin' => 'Male',
+                'username' => 'admin12345',
+                'pass' => 'admin123',
+            ]
+                  
+        );
+        $this->assertContains('<title>Sign Up</title>', $output);
+        $this->request(
+                'POST',['MyController','login'],
+                ['username' => 'admin12345',
+                'pass' => 'admin12',
+                ]
+            );
+        $this->assertContains('<meta name="viewport" content="width=device-width, initial-scale=1">', $output);
+               
+    }  
+    
     public function test_index (){
          $output = $this->request(
                 'POST', ['MyController', 'index'], [
@@ -267,7 +328,7 @@ class Controller_test extends TestCase {
     public function test_create (){
          $output = $this->request(
                 'POST', ['MyController', 'create',], [
-                    'idKendaraan' => '999',
+                    'idKendaraan' => '199',
                     'merkKendaraan' => 'tes',
                     'namaKendaraan' => 'tes',
                     "hargaSewa"=> '250000',
@@ -284,7 +345,7 @@ class Controller_test extends TestCase {
         $this->request(
                 'POST', ['MyController', 'deletekatalog'],[
                  
-                    'item' => '999'
+                    'item' => '199'
                  ]      
                 
            );

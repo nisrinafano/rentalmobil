@@ -93,7 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											
 												
 											<?php foreach ($data as $x) { ?>
-											<li><a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>"> <?= $x['namabrg'] ?> </a> </li>
+											<li><a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>"> <?= $x['namaKendaraan'] ?> </a> </li>
 											<?php } ?>
 											<br></br>
 											<li><a href="<?php echo base_url().'MyController/prod'?>">SEE ALL</a></li>
@@ -130,12 +130,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><div class="banner-grid">
 						<h2>Featured Products</h2>
 						<div class="wome">
-								<a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>" ><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/prod3.jpg" alt="" />
+								<a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>" ><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/ertiga.png" alt="" />
 								</a>
 								<div class="women simpleCart_shelfItem">
 									
-									<h6 ><a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>"><?php echo $data[2]['namabrg']?></a></h6>
-									<p class="ba-price"><em class="item_price">Rp.<?php echo $data[2]['hargabrg']?></em></p>
+									<h6 ><a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>"><?php echo $data[2]['namaKendaraan']?></a></h6>
+									<p class="ba-price"><em class="item_price">Rp.<?php echo $data[2]['hargaSewa']?></em></p>
 									<a href="<?php echo base_url().'MyController/order'?>" data-text="Book Now" class="but-hover1 item_add">Book Now</a>
 								</div>							
 								</div>							
@@ -143,12 +143,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><div class="banner-grid">
 						<h2>Featured Products</h2>
 						<div class="wome">
-								<a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>" ><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/prod4.jpg" alt="" />
+								<a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>" ><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/hiace.png" alt="" />
 								</a>	
 								<div class="women simpleCart_shelfItem">
 									
-									<h6 ><a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>"><?php echo $data[3]['namabrg']?></a></h6>
-									<p class="ba-price"><em class="item_price">Rp.<?php echo $data[3]['hargabrg']?></em></p>
+									<h6 ><a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>"><?php echo $data[3]['namaKendaraan']?></a></h6>
+									<p class="ba-price"><em class="item_price">Rp.<?php echo $data[3]['hargaSewa']?></em></p>
 									<a href="<?php echo base_url().'MyController/order'?>" data-text="Book Now" class="but-hover1 item_add">Book Now</a>
 								</div>						
 								</div>						
@@ -156,12 +156,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><div class="banner-grid">
 						<h2>Featured Products</h2>
 						<div class="wome">
-								<a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>" ><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/prod8.jpg" alt="" />
+								<a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>" ><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/pajero.png" alt="" />
 								</a>	
 								<div class="women simpleCart_shelfItem">
 									
-									<h6 ><a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>"><?php echo $data[7]['namabrg']?></a></h6>
-									<p class="ba-price"><em class="item_price">Rp.<?php echo $data[7]['hargabrg']?></em></p>
+									<h6 ><a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>"><?php echo $data[5]['namaKendaraan']?></a></h6>
+									<p class="ba-price"><em class="item_price">Rp.<?php echo $data[5]['hargaSewa']?></em></p>
 									<a href="<?php echo base_url().'MyController/order'?>" data-text="Book Now" class="but-hover1 item_add">Book Now</a>
 								</div>						
 								</div>						
@@ -257,26 +257,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						       <div id="owl-demo" class="owl-carousel">
 					                <div class="item">					                	 
 										  
-											<a href="<?php echo base_url().'MyController/prod'?>"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/prod2.jpg" alt="" /></a>  
+											<a href="<?php echo base_url().'MyController/prod'?>"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/avanza.png" alt="" /></a>  
 											<a href="<?php echo base_url().'MyController/prod'?>" class="shop-2" >Book Now</a>
 								
 					                </div>
 									<div class="item">					                	  
 										
-											<a href="<?php echo base_url().'MyController/prod'?>"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/prod5.jpg" alt="" /></a>  
+											<a href="<?php echo base_url().'MyController/prod'?>"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/agya.png" alt="" /></a>  
 											<a href="<?php echo base_url().'MyController/prod'?>" class="shop-2">Book Now</a>									
 																		
 					                </div>
 									
 									<div class="item">					                	 
 									
-											<a href="<?php echo base_url().'MyController/prod'?>"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/prod3.jpg" alt="" /> </a> 
+											<a href="<?php echo base_url().'MyController/prod'?>"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/innova.png" alt="" /> </a> 
 											<a href="<?php echo base_url().'MyController/prod'?>" class="shop-2">Book Now</a>									
 																			
 					                </div>
 									<div class="item">					                	  
 										
-											<a href="<?php echo base_url().'MyController/prod'?>"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/prod6.jpg" alt="" /></a>  
+											<a href="<?php echo base_url().'MyController/prod'?>"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/ertiga.png" alt="" /></a>  
 											<a href="<?php echo base_url().'MyController/prod'?>" class="shop-2">Book Now</a>									
 																		
 					                </div>
@@ -301,18 +301,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<figure>		
 										<a href="single.html">
 											<div class="grid-img">
-												<img  src="<?php echo base_url(); ?>/assets/web/images/prod1.jpg" class="img-responsive" alt="">
+												<img  src="<?php echo base_url(); ?>/assets/web/images/avanza.png" class="img-responsive" alt="">
 											</div>
 											<div class="grid-img">
-												<img  src="<?php echo base_url(); ?>/assets/web/images/prod1.jpg" class="img-responsive"  alt="">
+												<img  src="<?php echo base_url(); ?>/assets/web/images/avanza.png" class="img-responsive"  alt="">
 											</div>			
 										</a>		
 									</figure>	
 								</div>
 								<div class="women">
 									
-									<h6><a href="single.html"> <?php echo $data[0]['namabrg']?></a></h6>
-									<p ><em class="item_price">Rp.<?php echo $data[0]['hargabrg']?></em></p>
+									<h6><a href="single.html"> <?php echo $data[0]['namaKendaraan']?></a></h6>
+									<p ><em class="item_price">Rp.<?php echo $data[0]['hargaSewa']?></em></p>
 									<a href="<?php echo base_url().'MyController/order'?>" data-text="Book Now" class="but-hover1 item_add">Book Now</a>
 								</div>
 							</div>
@@ -325,18 +325,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<figure>		
 										<a href="single.html">
 											<div class="grid-img">
-												<img  src="<?php echo base_url(); ?>/assets/web/images/prod5.jpg" class="img-responsive" alt="">
+												<img  src="<?php echo base_url(); ?>/assets/web/images/innova.png" class="img-responsive" alt="">
 											</div>
 											<div class="grid-img">
-												<img  src="<?php echo base_url(); ?>/assets/web/images/prod5.jpg" class="img-responsive"  alt="">
+												<img  src="<?php echo base_url(); ?>/assets/web/images/innova.png" class="img-responsive"  alt="">
 											</div>			
 										</a>		
 									</figure>	
 								</div>
 								<div class="women">
 									
-									<h6><a href="single.html"><?php echo $data[4]['namabrg']?></a></h6>
-									<p ><em class="item_price">Rp.<?php echo $data[4]['hargabrg']?></em></p>
+									<h6><a href="single.html"><?php echo $data[4]['namaKendaraan']?></a></h6>
+									<p ><em class="item_price">Rp.<?php echo $data[4]['hargaSewa']?></em></p>
 									<a href="<?php echo base_url().'MyController/order'?>" data-text="Book Now" class="but-hover1 item_add">Book Now</a>
 								</div>
 							</div>
@@ -347,18 +347,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<figure>		
 										<a href="single.html">
 											<div class="grid-img">
-												<img  src="<?php echo base_url(); ?>/assets/web/images/prod7.jpg" class="img-responsive" alt="">
+												<img  src="<?php echo base_url(); ?>/assets/web/images/pajero.png" class="img-responsive" alt="">
 											</div>
 											<div class="grid-img">
-												<img  src="<?php echo base_url(); ?>/assets/web/images/prod7.jpg" class="img-responsive"  alt="">
+												<img  src="<?php echo base_url(); ?>/assets/web/images/pajero.png" class="img-responsive"  alt="">
 											</div>			
 										</a>		
 									</figure>	
 								</div>
 								<div class="women">
 									
-									<h6><a href="single.html"><?php echo $data[6]['namabrg']?></a></h6>
-									<p ><em class="item_price">Rp.<?php echo $data[6]['hargabrg']?></em></p>
+									<h6><a href="single.html"><?php echo $data[5]['namaKendaraan']?></a></h6>
+									<p ><em class="item_price">Rp.<?php echo $data[5]['hargaSewa']?></em></p>
 									<a href="<?php echo base_url().'MyController/order'?>" data-text="Book Now" class="but-hover1 item_add">Book Now</a>
 								</div>
 							</div>
@@ -367,7 +367,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="col-md-5 col-md1 animated wow fadeInRight" data-wow-delay=".1s">
 						<div class="col-3">
-							<a href="<?php echo base_url().'MyController/prod'?>"><img src="<?php echo base_url(); ?>/assets/web/images/9.jpg" class="img-responsive " alt="">
+							<a href="<?php echo base_url().'MyController/prod'?>"><img src="<?php echo base_url(); ?>/assets/web/images/car4.jpeg" class="img-responsive " alt="">
 							<div class="col-pic">
 								<h5>Book Now</h5>
 								<p>Klik Disini untuk Pemesanan Penyewaan Kendaraan</p>

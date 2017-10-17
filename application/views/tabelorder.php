@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PELO | Read Katalog</title>
+<title>RENTAL MOBIL | Read Katalog</title>
 
 <link href="<?php echo base_url(); ?>/assets/back/css/bootstrap.min.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>/assets/back/css/datepicker3.css" rel="stylesheet">
@@ -35,7 +35,7 @@ th, td {
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><span>PELO Apparel | </span>Admin</a>
+				<a class="navbar-brand" href="#"><span>RENTAL MOBIL | </span>Admin</a>
 				<ul class="user-menu">
 					<a href="<?php echo base_url().'adminin'?>"> Logout <span class="caret"></span></a>
 				</ul>
@@ -105,9 +105,11 @@ th, td {
 						        <td>Email</td>
 						        <td>Alamat</td>
 						        <td>No Hp</td>
-						        <td>Pesanan</td>
-						        <td>Tanggal Order</td>
-						 
+						        <td>No. KTP</td>
+						        <td>Nama Kendaraan</td>
+						        <td>Jumlah Kendaraan</td>
+						 		<td>Durasi Peminjaman</td>
+
 						    </thead>
 						    <form method="post" action="<?php echo base_url().'MyController/getOrder'?>"> 
 							<tbody align="center";">
@@ -118,8 +120,10 @@ th, td {
 								<td><?= $x['email'] ?></td>
 								<td><?= $x['alamat'] ?></td>
 								<td><?= $x['nohp'] ?></td>
-								<td><?= $x['pesanan'] ?></td>
-								<td><?= $x['tglOrder'] ?></td>
+								<td><?= $x['noktp'] ?></td>
+								<td><?= $x['namakendaraan'] ?></td>
+								<td><?= $x['jumlahkendaraan'] ?></td>
+								<td><?= $x['durasipeminjaman'] ?></td>
 								</tr>
 							<?php } ?>
 							</tbody>

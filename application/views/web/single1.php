@@ -92,7 +92,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											
 												
 											<?php foreach ($data as $x) { ?>
-											<li><a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>"> <?= $x['namabrg'] ?> </a> </li>
+											<li><a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>"> <?= $x['namaKendaraan'] ?> </a> </li>
 											<?php } ?>
 											<br></br>
 											<li><a href="<?php echo base_url().'MyController/prod'?>">SEE ALL</a></li>
@@ -138,7 +138,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<?php foreach ($data as $x) { ?>
 							<ul>
 								
-								<li><i class="glyphicon glyphicon-menu-right" ></i><a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>"> <?= $x['namabrg'] ?> </a> </li>
+								<li><i class="glyphicon glyphicon-menu-right" ></i><a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>"> <?= $x['namaKendaraan'] ?> </a> </li>
 								
 					
 					</ul>
@@ -163,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="flexslider">
 			  <ul class="slides">
 			    <li data-thumb="images/si.jpg">
-			        <div class="thumb-image"> <img src="<?php echo base_url().'upload/'.$x['gambarbrg']; ?>" data-imagezoom="true" class="img-responsive"> </div>
+			        <div class="thumb-image"> <img src="<?php echo base_url().'upload/'.$x['fotoKendaraan']; ?>" data-imagezoom="true" class="img-responsive"> </div>
 			    </li>
 			    
 			  </ul>
@@ -171,10 +171,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>	
 <div class="col-md-7 single-top-in">
 						<div class="span_2_of_a1 simpleCart_shelfItem">
-				<h3><?= $x['namabrg'] ?></h3>
+				<h3><?= $x['namaKendaraan'] ?></h3>
 				
 			    <div class="price_single">
-				  <span class="reducedfrom item_price">Rp. <?= $x['hargabrg'] ?></span>
+				  <span class="reducedfrom item_price">Rp. <?= $x['hargaSewa'] ?></span>
 				 <a href="<?php echo base_url().'MyController/order'?>" data-text="Order Now" class="but-hover1 item_add">Order Now</a>
 				 <div class="clearfix"></div>
 				</div>
@@ -190,9 +190,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="resp-tabs-container">
 							    <h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-0"><span class="resp-arrow"></span>Product Description</h2><div class="tab-1 resp-tab-content resp-tab-content-active" aria-labelledby="tab_item-0" style="display:block">
 									<div class="facts">
-									  <p > <h3>Deskripsi Produk : </h3><?= $x['deskripsibrg'] ?> </p>
-									  <p > <h3>Pilihan Warna : </h3><?= $x['warnabrg'] ?> </p>	         
-							          <p > <h3>Pilihan Ukuran : </h3><?= $x['ukuranbrg'] ?> </p>
+									  <p > <h3>Merk Kendaraan : </h3><?= $x['merkKendaraan'] ?> </p>
+									  <p > <h3>Nama Kendaraan : </h3><?= $x['namaKendaraan'] ?> </p>	         
+							          <p > <h3>Nomor Polisi Kendaraan : </h3><?= $x['nopolKendaraan'] ?> </p>
 							        </div>
 
 							    	</div>					        

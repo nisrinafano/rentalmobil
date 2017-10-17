@@ -95,7 +95,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											
 												
 											<?php foreach ($data as $x) { ?>
-											<li><a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>"> <?= $x['namabrg'] ?> </a> </li>
+											<li><a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>"> <?= $x['namaKendaraan'] ?> </a> </li>
 											<?php } ?>
 											<br></br>
 											<li><a href="<?php echo base_url().'MyController/prod'?>">SEE ALL</a></li>
@@ -151,7 +151,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 				
 						<div class="contact-form2">
-							<h4>Alamat Pengiriman</h4>
+							<h4>Alamat Lengkap</h4>
 						
 								<input type="text" name= "alamat" placeholder=""required="">
 						
@@ -162,79 +162,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<input type="text" name= "nohp" placeholder=""required="">
 						
 						</div>
+						<div class="contact-form2">
+							<h4>No. KTP</h4>
+							
+								<input type="text" name= "noktp" placeholder=""required="">
 						
+						</div>
+						<div class="contact-form2">
+							<h4>Nama Kendaraan</h4>
+							
+								<input type="text" name= "namakendaraan" placeholder=""required="">
+						
+						</div>
+						<div class="contact-form2">
+							<h4>Jumlah Kendaraan</h4>
+							
+								<input type="text" name= "jumlahkendaraan" placeholder=""required="">
+						
+						</div>
 
+						<div class="contact-form2">
+							<h4>Durasi Peminjaman</h4>
+							
+								<input type="text" name= "durasipeminjaman" placeholder=""required="">
 						
+						</div>
 					
-						
+						<input type="submit" value="Submit" >
 				</form>
 
-				<div class="container">
-				<div class="logo-nav">
 				
-					
 
-					
-						<ul class="nav navbar1-nav">
-				<div class="text-left"> 
 				
-							<h4>Pesanan</h4>		
-
-							<li class="dropdown active">
-  								<div class="form-group">
-						  <label for="sel1">Nama Barang</label>
-						  <select class="form-control" id="sel1">
-						    <option>ITS</option>
-						    <option>ITS-SBY</option>
-						    <option>1960</option>
-						    <option>Nutrition</option>
-						    <option>ITS-Navy</option>
-						    <option>Wristband-Black</option>
-						    <option>Wristband-Grey</option>
-						    <option>Wristband-Navy</option>
-						  </select>
-						</div>
-							</li> 
-
-
-							<li class="dropdown active">
-  								<div class="form-group">
-						  <label for="sel1">Warna Barang</label>
-						  <select class="form-control" id="sel1">
-						    <option>Black</option>
-						    <option>Navy Blue</option>
-						    <option>Grey</option>
-						  </select>
-						</div>
-							</li> 
-
-
-							<li class="dropdown active">
-  								<div class="form-group">
-						  <label for="sel1">Size</label>
-						  <select class="form-control" id="sel1">
-						    <option>S</option>
-						    <option>M</option>
-						    <option>L</option>
-						    <option>XL</option>
-						  </select>
-						</div>
-							</li> 
-
-							
-							<p>Jumlah Barang</p>
-							<input type="text" name= "jumlahbrg" placeholder="Jumlah Barang"required="">
-								
-							
-														
-						</div>
-						</ul>
-								
-						
-						</div>
-						</div>
-
-				<input type="submit" value="Submit" >
 			</div>
 			
 			

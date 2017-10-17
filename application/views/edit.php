@@ -89,39 +89,33 @@
 								<div class="col-md-6">
 								<div class="form-group">
 									<label>Id Barang</label>
-									<input class="form-control"  value="<?php echo $idbrg; ?>"  name="idbrg">
+									<input class="form-control"  value="<?php echo $idKendaraan; ?>"  name="idKendaraan">
 								</div>
 																
-								<div class="form-group">
-									<label>Jenis Barang</label>
-									<input class="form-control"  value="<?php echo $jenisbrg; ?>" name="jenisbrg">
-								</div>
+								
 								<div class="form-group">
 									<label>Nama Barang</label>
-									<input class="form-control"  value="<?php echo $namabrg; ?>" name="namabrg">
+									<input class="form-control"  value="<?php echo $namaKendaraan; ?>" name="namaKendaraan">
 								</div>
 								<div class="form-group">
 									<label>Harga Barang</label>
-									<input class="form-control"  value="<?php echo $hargabrg; ?>" name="hargabrg">
+									<input class="form-control"  value="<?php echo $hargaSewa; ?>" name="hargaSewa">
 								</div>
-								<div class="form-group">
-									<label>Ukuran Barang</label>
-									<input class="form-control"   value="<?php echo $ukuranbrg; ?>" name="ukuranbrg">
-								</div>
+								
 								<div class="form-group">
 									<label>Warna Barang</label>
-									<input class="form-control"   value="<?php echo $warnabrg; ?>" name="warnabrg">
+									<input class="form-control"   value="<?php echo $nopolKendaraan; ?>" name="nopolKendaraan">
 								</div>
 								<div class="form-group">
 									<label>Satuan Barang</label>
-									<input class="form-control"  value="<?php echo $satuanbrg; ?>" name="satuanbrg">
+									<input class="form-control"  value="<?php echo $idPemilik; ?>" name="idPemilik">
 								</div>			
 						</div>
 
 						<div class="col-md-6">
 								<div class="form-group">
 									<label>Gambar Barang</label>
-									<input type="file"  value="<?php echo $gambarbrg; ?>" name="gambarbrg">
+									<input type="file"  value="<?php echo $fotoKendaraan; ?>" name="fotoKendaraan">
 									 <p class="help-block">Example block-level help text here.</p><br>
 								</div>
 								<div class="form-group">
@@ -129,10 +123,7 @@
 									<input type="file"  value="<?php echo $gambarbrg_model; ?>" name="gambarbrg_model">
 									 <p class="help-block">Example block-level help text here.</p><br>
 								</div>
-								<div class="form-group">
-									<label>Deskripsi</label>
-									<textarea class="form-control" rows="5"  value="<?php echo $deskripsibrg; ?>" name="deskripsibrg"></textarea>
-								</div>
+								
 
 								<button type="submit" class="btn btn-primary">Edit</button>
 								<button type="reset" class="btn btn-default">Reset Button</button>

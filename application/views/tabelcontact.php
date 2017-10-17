@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PELO | Read Katalog</title>
+<title>RENTAL MOBIL | Read Katalog</title>
 
 <link href="<?php echo base_url(); ?>/assets/back/css/bootstrap.min.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>/assets/back/css/datepicker3.css" rel="stylesheet">
@@ -29,7 +29,7 @@ th, td {
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#"><span>PELO Apparel | </span>Admin</a>
+				<a class="navbar-brand" href="#"><span>RENTAL MOBIL | </span>Admin</a>
 				<ul class="user-menu">
 						<a href="<?php echo base_url().'adminin'?>"> Logout <span class="caret"></span></a>
 				</ul>

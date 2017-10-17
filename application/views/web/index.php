@@ -93,7 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											
 												
 											<?php foreach ($data as $x) { ?>
-											<li><a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>"> <?= $x['namabrg'] ?> </a> </li>
+											<li><a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>"> <?= $x['namaKendaraan'] ?> </a> </li>
 											<?php } ?>
 											<br></br>
 											<li><a href="<?php echo base_url().'MyController/prod'?>">SEE ALL</a></li>
@@ -130,12 +130,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><div class="banner-grid">
 						<h2>Featured Products</h2>
 						<div class="wome">
-								<a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>" ><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/prod3.jpg" alt="" />
+								<a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>" ><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/prod3.jpg" alt="" />
 								</a>
 								<div class="women simpleCart_shelfItem">
 									
-									<h6 ><a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>"><?php echo $data[2]['namabrg']?></a></h6>
-									<p class="ba-price"><em class="item_price">Rp.<?php echo $data[2]['hargabrg']?></em></p>
+									<h6 ><a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>"><?php echo $data[2]['namaKendaraan']?></a></h6>
+									<p class="ba-price"><em class="item_price">Rp.<?php echo $data[2]['hargaSewa']?></em></p>
 									<a href="<?php echo base_url().'MyController/order'?>" data-text="Book Now" class="but-hover1 item_add">Book Now</a>
 								</div>							
 								</div>							
@@ -143,12 +143,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><div class="banner-grid">
 						<h2>Featured Products</h2>
 						<div class="wome">
-								<a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>" ><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/prod4.jpg" alt="" />
+								<a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>" ><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/prod4.jpg" alt="" />
 								</a>	
 								<div class="women simpleCart_shelfItem">
 									
-									<h6 ><a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>"><?php echo $data[3]['namabrg']?></a></h6>
-									<p class="ba-price"><em class="item_price">Rp.<?php echo $data[3]['hargabrg']?></em></p>
+									<h6 ><a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>"><?php echo $data[3]['namaKendaraan']?></a></h6>
+									<p class="ba-price"><em class="item_price">Rp.<?php echo $data[3]['hargaSewa']?></em></p>
 									<a href="<?php echo base_url().'MyController/order'?>" data-text="Book Now" class="but-hover1 item_add">Book Now</a>
 								</div>						
 								</div>						
@@ -156,12 +156,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><div class="banner-grid">
 						<h2>Featured Products</h2>
 						<div class="wome">
-								<a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>" ><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/prod8.jpg" alt="" />
+								<a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>" ><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/prod8.jpg" alt="" />
 								</a>	
 								<div class="women simpleCart_shelfItem">
 									
-									<h6 ><a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>"><?php echo $data[7]['namabrg']?></a></h6>
-									<p class="ba-price"><em class="item_price">Rp.<?php echo $data[7]['hargabrg']?></em></p>
+									<h6 ><a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>"><?php echo $data[7]['namaKendaraan']?></a></h6>
+									<p class="ba-price"><em class="item_price">Rp.<?php echo $data[7]['hargaSewa']?></em></p>
 									<a href="<?php echo base_url().'MyController/order'?>" data-text="Book Now" class="but-hover1 item_add">Book Now</a>
 								</div>						
 								</div>						
@@ -311,8 +311,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="women">
 									
-									<h6><a href="single.html"> <?php echo $data[0]['namabrg']?></a></h6>
-									<p ><em class="item_price">Rp.<?php echo $data[0]['hargabrg']?></em></p>
+									<h6><a href="single.html"> <?php echo $data[0]['namaKendaraan']?></a></h6>
+									<p ><em class="item_price">Rp.<?php echo $data[0]['hargaSewa']?></em></p>
 									<a href="<?php echo base_url().'MyController/order'?>" data-text="Book Now" class="but-hover1 item_add">Book Now</a>
 								</div>
 							</div>
@@ -335,8 +335,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="women">
 									
-									<h6><a href="single.html"><?php echo $data[4]['namabrg']?></a></h6>
-									<p ><em class="item_price">Rp.<?php echo $data[4]['hargabrg']?></em></p>
+									<h6><a href="single.html"><?php echo $data[4]['namaKendaraan']?></a></h6>
+									<p ><em class="item_price">Rp.<?php echo $data[4]['hargaSewa']?></em></p>
 									<a href="<?php echo base_url().'MyController/order'?>" data-text="Book Now" class="but-hover1 item_add">Book Now</a>
 								</div>
 							</div>
@@ -357,8 +357,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="women">
 									
-									<h6><a href="single.html"><?php echo $data[6]['namabrg']?></a></h6>
-									<p ><em class="item_price">Rp.<?php echo $data[6]['hargabrg']?></em></p>
+									<h6><a href="single.html"><?php echo $data[6]['namaKendaraan']?></a></h6>
+									<p ><em class="item_price">Rp.<?php echo $data[6]['hargaSewa']?></em></p>
 									<a href="<?php echo base_url().'MyController/order'?>" data-text="Book Now" class="but-hover1 item_add">Book Now</a>
 								</div>
 							</div>

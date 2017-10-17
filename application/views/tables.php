@@ -113,14 +113,13 @@ th, td {
 					<tbody align="center">
 					<?php foreach ($data as $x) { ?>
 						<tr>
-						<td><input type="checkbox" value="<?= $x['idbrg']?>" name='item[]'></td> 
-						<td><?= $x['idbrg'] ?></td>
-						<td><?= $x['jenisbrg'] ?></td>
-						<td><?= $x['namabrg'] ?></td>
-						<td><?= $x['hargabrg'] ?></td>
-						<td><?= $x['ukuranbrg'] ?></td>
-						<td><?= $x['warnabrg'] ?></td>
-						<td><?= $x['satuanbrg'] ?></td>
+						<td><input type="checkbox" value="<?= $x['idKendaraan']?>" name='item[]'></td> 
+						<td><?= $x['idKendaraan'] ?></td>
+						<td><?= $x['merkKendaraan'] ?></td>
+						<td><?= $x['namaKendaraan'] ?></td>
+						<td><?= $x['hargaSewa'] ?></td>
+						<td><?= $x['nopolKendaraan'] ?></td>
+						<td><?= $x['idPemilik'] ?></td>
 						
 						<td align=center>
 							<a href="<?php echo base_url().'MyController/updateKatalog/'?>">Edit</a>

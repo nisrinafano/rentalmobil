@@ -80,7 +80,7 @@ class Controller_test extends TestCase {
                 
                 ]
         );
-        $this->assertContains('<h1 class="animated wow pulse" data-wow-delay=".5s"><a href="index.html">Rental<span>Mobil</span></a></h1>', $output);
+        $this->assertContains('<ul class="dropdown-menu multi">', $output);
     }
     
     public function test_adminorder (){

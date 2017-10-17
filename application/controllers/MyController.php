@@ -101,6 +101,25 @@ class MyController extends CI_Controller {
 	$this->createOrder();
 	}
 	
+        function createAccount() {   
+		$data['err_message']="";
+		$this->load->view('signup',$data);
+	}
+        
+        function createUser(){
+	$data = array( 
+	'first' => $this->input->post('first'),
+	'last' => $this->input->post('last'),  
+	'nohp' => $this->input->post('nohp'),
+	'email' => $this->input->post('email'),
+	'jeniskelamin' => $this->input->post('jeniskelamin'),
+        'username' => $this->input->post('username'),  
+	'password' => $this->input->post('pass')		
+	);
+	
+	$this->My_Model->addAkun($data);   
+	$this->createAccount();
+	}
 	
 	function login(){
 		$username = $this->input->post('username'); 

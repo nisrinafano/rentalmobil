@@ -22,5 +22,13 @@ class My_Model_test extends TestCase
         $actual = $this->model->signUp_authen('admin','121212admin');
         $this->assertEquals($expected, $actual);
     }
+    
+    public function test_signup2(){
+        
+        $expected = 'false';
+        $actual = $this->model->signUp_authen('admin','');
+        $this->assertEquals($expected, $actual);
+    }
+
        
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="CodeIgniter Application Test Suite" tests="30" assertions="32" failures="0" errors="0" time="3.122190">
+    <testsuite name="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" fullPackage="Controller" tests="27" assertions="29" failures="0" errors="0" time="3.044871">
+      <testcase name="test_login" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="17" assertions="1" time="0.051736"/>
+      <testcase name="test_login1" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="30" assertions="1" time="0.199593"/>
+      <testcase name="test_login2" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="66" assertions="2" time="0.201406"/>
+      <testcase name="test_index" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="91" assertions="1" time="0.053251"/>
+      <testcase name="test_index2" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="102" assertions="1" time="0.051586"/>
+      <testcase name="test_admin" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="111" assertions="1" time="0.032960"/>
+      <testcase name="test_contact" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="120" assertions="1" time="0.040994"/>
+      <testcase name="test_adminin" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="129" assertions="1" time="0.037726"/>
+      <testcase name="test_order" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="138" assertions="1" time="0.038464"/>
+      <testcase name="test_adminorder" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="147" assertions="1" time="0.036665"/>
+      <testcase name="test_admincontact" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="156" assertions="1" time="0.038060"/>
+      <testcase name="test_prod" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="165" assertions="1" time="0.045688"/>
+      <testcase name="test_readkatalog" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="174" assertions="1" time="0.037077"/>
+      <testcase name="test_getdetail" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="183" assertions="1" time="0.040511"/>
+      <testcase name="test_getdetail2" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="192" assertions="1" time="0.031340"/>
+      <testcase name="test_getdetail1" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="201" assertions="1" time="0.648469"/>
+      <testcase name="test_createcontact" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="208" assertions="1" time="0.169188"/>
+      <testcase name="test_createorder" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="217" assertions="1" time="0.157071"/>
+      <testcase name="test_createkatalog" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="227" assertions="1" time="0.041837"/>
+      <testcase name="test_dashboard" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="236" assertions="1" time="0.041326"/>
+      <testcase name="test_signup" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="245" assertions="1" time="0.039784"/>
+      <testcase name="test_contactus" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="254" assertions="1" time="0.246855"/>
+      <testcase name="test_createuser" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="268" assertions="1" time="0.093180"/>
+      <testcase name="test_updatekatalog" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="285" assertions="1" time="0.042151"/>
+      <testcase name="test_doupdate" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="304" assertions="1" time="0.212133"/>
+      <testcase name="test_create" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="328" assertions="2" time="0.217853"/>
+      <testcase name="test_orderr" class="Controller_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Controller_test.php" line="356" assertions="1" time="0.197967"/>
+    </testsuite>
+    <testsuite name="Welcome_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Welcome_test.php" fullPackage="Welcome" tests="3" assertions="3" failures="0" errors="0" time="0.077319">
+      <testcase name="test_index" class="Welcome_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Welcome_test.php" line="13" assertions="1" time="0.039458"/>
+      <testcase name="test_method_404" class="Welcome_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Welcome_test.php" line="19" assertions="1" time="0.021873"/>
+      <testcase name="test_APPPATH" class="Welcome_test" file="C:\xampp\htdocs\PELO\application\tests\controllers\Welcome_test.php" line="25" assertions="1" time="0.015988"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

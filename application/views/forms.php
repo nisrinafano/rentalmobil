@@ -36,7 +36,7 @@
 		
 		<ul class="nav menu">
 			<li><a href="<?php echo base_url() . 'read' ?>"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Tabel Katalog</a></li>
-			<li><a href="<?php echo base_url() . 'MyController/createKatalog' ?>"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Add Katalog</a></li> 
+			<li><a href="<?php echo base_url() . 'Kendaraan/createKatalog' ?>"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Add Katalog</a></li> 
 			<li><a href="<?php echo base_url() . 'MyController/adminOrder' ?>"><svg class="glyph stroked star"><use xlink:href="#stroked-star"></use></svg> Order</a></li>
 			<li><a href="<?php echo base_url() . 'MyController/adminContact' ?>"><svg class="glyph stroked star"><use xlink:href="#stroked-star"></use></svg> Contact</a></li>
 			<li class="parent ">
@@ -85,7 +85,7 @@
 					<div class="panel-heading">Add into Katalog</div>
 					<div class="panel-body">
 						<div class="col-md-6">
-							<?php echo form_open_multipart(base_url('MyController/do_upload')); ?>
+							<?php echo form_open_multipart(base_url('Kendaraan/do_upload')); ?>
 
 								<div class="form-group">
 									<label>Id Kendaraan</label>

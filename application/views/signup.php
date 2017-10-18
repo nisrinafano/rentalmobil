@@ -31,7 +31,7 @@
 
     <div class="grid">
 
-            <form action="<?php echo base_url().'createUser'?>" method="POST" class="form login">
+            <form action="<?php echo base_url().'index.php/User/createUser'?>" method="POST" class="form login">
       	<div class="form__field">
           <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">First Name</span></label>
           <input id="login__username" type="text" name="first" class="form__input" placeholder="First Name" required>

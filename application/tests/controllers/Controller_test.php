@@ -111,7 +111,6 @@ class Controller_test extends TestCase {
     public function test_admin (){
          $output = $this->request(
                 'POST', ['MyController', 'admin'], [
-                
                 ]
         );
         $this->assertContains('<meta name="viewport" content="width=device-width, initial-scale=1">', $output);
@@ -120,7 +119,6 @@ class Controller_test extends TestCase {
     public function test_contact (){
          $output = $this->request(
                 'POST', ['MyController', 'contact'], [
-                
                 ]
         );
         $this->assertContains('<meta name="viewport" content="width=device-width, initial-scale=1">', $output);
@@ -129,7 +127,6 @@ class Controller_test extends TestCase {
     public function test_adminin (){
          $output = $this->request(
                 'POST', ['MyController', 'adminin'], [
-                
                 ]
         );
         $this->assertContains('<meta name="viewport" content="width=device-width, initial-scale=1">', $output);
@@ -165,7 +162,6 @@ class Controller_test extends TestCase {
     public function test_prod (){
          $output = $this->request(
                 'POST', ['MyController', 'prod'], [
-                
                 ]
         );
         $this->assertContains('<meta name="viewport" content="width=device-width, initial-scale=1">', $output);
@@ -174,7 +170,6 @@ class Controller_test extends TestCase {
     public function test_readkatalog (){
          $output = $this->request(
                 'POST', ['MyController', 'readkatalog'], [
-                
                 ]
         );
         $this->assertContains('<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">', $output);
@@ -227,7 +222,6 @@ class Controller_test extends TestCase {
      public function test_createkatalog (){
          $output = $this->request(
                 'POST', ['MyController', 'createkatalog',], [
-                
                 ]
         );
         $this->assertContains('<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>', $output);
@@ -236,7 +230,6 @@ class Controller_test extends TestCase {
     public function test_dashboard (){
          $output = $this->request(
                 'POST', ['MyController', 'dashboard',], [
-                
                 ]
         );
         $this->assertContains('<div class="easypiechart" id="easypiechart-blue" data-percent="92" ><span class="percent">92%</span', $output);
@@ -306,18 +299,15 @@ class Controller_test extends TestCase {
         $_SESSION['username'] = "admin";
         $_SESSION['pass'] = "admin";
                 $output = $this->request(
-                'POST', ['MyController', 'doupdate'], [
-                            
+                'POST', ['MyController', 'doupdate'], [    
                 "idKendaraan"=> '102',
-		"merkKendaraan"=> 'tes',
-		"namaKendaraan"=> 'tes',
-		"hargaSewa"=> '150000',
-			
-		"nopolKendaraan"=> 'L 4576 TY',
-		"idPemilik"=> '2147483647',
-		
-		'fotoKendaraan' => 'agya19.png',
-		'gambarbrg_model' => 'agya19.png', 
+				"merkKendaraan"=> 'tes',
+				"namaKendaraan"=> 'tes',
+				"hargaSewa"=> '150000',
+				"nopolKendaraan"=> 'L 4576 TY',
+				"idPemilik"=> '2147483647',
+				'fotoKendaraan' => 'agya19.png',
+				'gambarbrg_model' => 'agya19.png', 
             ]
         );
         $output = $this->request('GET', 'MyController/getDetail/102');
@@ -344,10 +334,8 @@ class Controller_test extends TestCase {
         $this->assertContains('<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">', $output);
         $this->request(
                 'POST', ['MyController', 'deletekatalog'],[
-                 
                     'item' => '199'
-                 ]      
-                
+                 ] 
            );
         $output = $this->request('GET', 'MyController/getDetail/999');
         $this->assertContains('<h2 class="animated wow fadeInLeft" data-wow-delay=".5s">Detail Product</h2>', $output);
@@ -355,8 +343,7 @@ class Controller_test extends TestCase {
     
     public function test_orderr (){
          $output = $this->request(
-                'POST', ['MyController', 'orderr'], [
-                            
+                'POST', ['MyController', 'orderr'], [         
                 'namalengkap' => 'endar',
                 'email' => 'endar@gmail.com',  
                 'alamat' => 'surabaya',

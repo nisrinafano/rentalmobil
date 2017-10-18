@@ -29,6 +29,14 @@ class User extends CI_Controller{
 					} 
 			}
 	}
+	
+	public function logout() {
+		$data_session = array('status');
+		$this->session->set_userdata("");
+		$this->session->unset_userdata($data_session);
+		$this->session->sess_destroy();
+		redirect('MyController/adminin');
+	}
     
     function createAccount() {   
 		$data['err_message']="";

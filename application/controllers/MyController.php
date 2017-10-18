@@ -149,6 +149,7 @@ class MyController extends CI_Controller {
 	public function deleteKatalog(){  
 		$item = $this ->input->post('item');
 		$this->My_Model->deleteBrg($item);
+		redirect('MyController/loadAdmin');
 	}
 	function dashboard(){  
 		$this->load->view('indexAdmin'); 

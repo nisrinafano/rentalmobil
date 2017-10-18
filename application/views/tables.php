@@ -37,7 +37,7 @@ th, td {
 				</button>
 				<a class="navbar-brand" href="#"><span>RENTAL MOBIL | </span>Admin</a>
 				<ul class="user-menu">
-					<a href="<?php echo base_url().'adminin'?>"> Logout <span class="caret"></span></a>
+					<a href="<?php echo base_url().'User/logout'?>"> Logout <span class="caret"></span></a>
 				</ul>
 			</div>
 							

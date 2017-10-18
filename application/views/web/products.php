@@ -93,7 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											
 												
 											<?php foreach ($data as $x) { ?>
-											<li><a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>"> <?= $x['namabrg'] ?> </a> </li>
+											<li><a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>"> <?= $x['namaKendaraan'] ?> </a> </li>
 											<?php } ?>
 											<br></br>
 											<li><a href="<?php echo base_url().'MyController/prod'?>">SEE ALL</a></li>
@@ -140,7 +140,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						
 							<ul>
 								<?php foreach ($data as $x) { ?>
-								<li><i class="glyphicon glyphicon-menu-right" ></i><a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>"> <?= $x['namabrg'] ?> </a> </li>
+								<li><i class="glyphicon glyphicon-menu-right" ></i><a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>"> <?= $x['namaKendaraan'] ?> </a> </li>
 								<?php } ?>
 					
 					</ul>
@@ -171,7 +171,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									
 										
 											<div class="grid-img">
-												<img  src="<?php echo base_url().'upload/'.$x['gambarbrg']; ?>" class="img-responsive" alt="">
+												<img  src="<?php echo base_url().'upload/'.$x['fotoKendaraan']; ?>" class="img-responsive" alt="">
 											</div>
 													
 												
@@ -179,8 +179,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="women">
 									
-									<h6><a href="<?php echo base_url().'MyController/getDetail/'.$x['idbrg']?>"> <?= $x['namabrg'] ?> </a></h6>
-									<p ><em class="item_price">Rp. <?= $x['hargabrg'] ?></em></p>
+									<h6><a href="<?php echo base_url().'MyController/getDetail/'.$x['idKendaraan']?>"> <?= $x['namaKendaraan'] ?> </a></h6>
+									<p ><em class="item_price">Rp. <?= $x['hargaSewa'] ?></em></p>
 									<a href="<?php echo base_url().'MyController/order'?>" data-text="Order Now" class="but-hover1 item_add">Order Now</a>
 								</div>
 							</div>

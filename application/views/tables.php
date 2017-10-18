@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PELO | Read Katalog</title>
+<title>RENTAL MOBIL | Read Katalog</title>
 
 <link href="<?php echo base_url(); ?>/assets/back/css/bootstrap.min.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>/assets/back/css/datepicker3.css" rel="stylesheet">
@@ -35,7 +35,7 @@ th, td {
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><span>PELO Apparel | </span>Admin</a>
+				<a class="navbar-brand" href="#"><span>RENTAL MOBIL | </span>Admin</a>
 				<ul class="user-menu">
 					<a href="<?php echo base_url().'adminin'?>"> Logout <span class="caret"></span></a>
 				</ul>
@@ -100,13 +100,13 @@ th, td {
 						<table style="width: 100%;" >
 							<thead align="center" style="background-color: blue; color: white;">
 								<td></td>
-								<td>ID BARANG</td>
-								<td>JENIS BARANG</td>
-								<td>NAMA BARANG</td>
-								<td>HARGA BARANG</td>
-								<td>UKURAN BARANG</td>
-								<td>WARNA BARANG</td>
-								<td>SATUAN BARANG</td>
+								<td>ID KENDARAAN</td>
+								<td>MERK KENDARAAN</td>
+								<td>NAMA KENDARAAN</td>
+								<td>HARGA SEWA</td>
+								
+								<td>NOPOL KENDARAAN</td>
+								<td>ID PEMILIK</td>
 								<td>Action</td>
 							</thead>
 					<form method="post" action="<?php echo base_url().'MyController/deleteKatalog'?>"> 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PELO | Create Katalog</title>
+<title>RENTAL MOBIL | Create Katalog</title>
 
 <link href="<?php echo base_url(); ?>/assets/back/css/bootstrap.min.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>/assets/back/css/datepicker3.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><span>PELO Apparel | </span>Admin</a>
+				<a class="navbar-brand" href="#"><span>RENTAL MOBIL | </span>Admin</a>
 				<ul class="user-menu">
 					<a href="<?php echo base_url().'adminin'?>"> Logout <span class="caret"></span></a>
 				</ul>
@@ -88,51 +88,45 @@
 							<?php echo form_open_multipart(base_url('MyController/do_upload')); ?>
 
 								<div class="form-group">
-									<label>Id Barang</label>
-									<input class="form-control" name="idbrg">
+									<label>Id Kendaraan</label>
+									<input class="form-control" name="idKendaraan">
 								</div>
 																
 								<div class="form-group">
-									<label>Jenis Barang</label>
-									<input class="form-control" name="jenisbrg">
+									<label>Merk Kendaraan</label>
+									<input class="form-control" name="merkKendaraan">
 								</div>
 								<div class="form-group">
-									<label>Nama Barang</label>
-									<input class="form-control" name="namabrg">
+									<label>Nama Kendaraan</label>
+									<input class="form-control" name="namaKendaraan">
 								</div>
 								<div class="form-group">
-									<label>Harga Barang</label>
-									<input class="form-control" name="hargabrg">
+									<label>Harga Sewa</label>
+									<input class="form-control" name="hargaSewa">
+								</div>
+								
+								<div class="form-group">
+									<label>Nopol Kendaraan</label>
+									<input class="form-control"  name="nopolKendaraan">
 								</div>
 								<div class="form-group">
-									<label>Ukuran Barang</label>
-									<input class="form-control"  name="ukuranbrg">
-								</div>
-								<div class="form-group">
-									<label>Warna Barang</label>
-									<input class="form-control"  name="warnabrg">
-								</div>
-								<div class="form-group">
-									<label>Satuan Barang</label>
-									<input class="form-control" name="satuanbrg">
+									<label>Id Pemilik</label>
+									<input class="form-control" name="idPemilik">
 								</div>		
 							</div>	
 
 						<div class="col-md-6">
 								<div class="form-group">
-									<label>Gambar Barang</label>
-									<input type="file" name="gambarbrg">
+									<label>Gambar Kendaraan</label>
+									<input type="file" name="fotoKendaraan">
 									 <p class="help-block">Example block-level help text here.</p><br>
 								</div>
 								<div class="form-group">
-									<label>Gambar Barang dengan Model</label>
+									<label>Gambar Kendaraan 2</label>
 									<input type="file" name="gambarbrg_model">
 									 <p class="help-block">Example block-level help text here.</p><br>
 								</div>
-								<div class="form-group">
-									<label>Deskripsi</label>
-									<textarea class="form-control" rows="3" name="deskripsibrg"></textarea>
-								</div>
+								
 
 								<button type="submit" class="btn btn-primary">Add</button>
 								<button type="reset" class="btn btn-default">Reset Button</button>

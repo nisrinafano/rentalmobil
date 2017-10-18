@@ -37,14 +37,23 @@ class MyController extends CI_Controller {
 		$this->load->view('tabelorder', array('data' => $data)); 
 	}
 	function loadAdmin() {
+		if($this->session->userdata('status') != "login" || $this->session->userdata('status') == "" || $this->session->userdata('status') == null ){
+			redirect(base_url());
+			}
 		$data = $this->My_Model->getBrg();      
 		$this->load->view('tables', array('data' => $data)); 
 	}
 	function adminContact() {
+		if($this->session->userdata('status') != "login" || $this->session->userdata('status') == "" || $this->session->userdata('status') == null ){
+			redirect(base_url());
+			}
 		$data = $this->My_Model->getContact();       
 		$this->load->view('tabelcontact', array('data' => $data)); 
 	}
 	function readKatalog(){
+		if($this->session->userdata('status') != "login" || $this->session->userdata('status') == "" || $this->session->userdata('status') == null ){
+			redirect(base_url());
+			}
 		$data = $this->My_Model->getBrg();  
 		$this->load->view('tables', array('data' => $data)); 
 	} 

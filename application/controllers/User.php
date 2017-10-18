@@ -13,6 +13,9 @@ class User extends CI_Controller{
 		$i = $this->My_Model->authen_user($username); 
 		
 		if ($isLogin == true && $i[0]['authentication'] < 3) {
+			$data_session =   array('status' => "login"
+                                    );
+                $this->session->set_userdata($data_session);
 		  	redirect('MyController/loadAdmin');
 		} 
 		else{  

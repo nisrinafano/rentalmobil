@@ -1,70 +1,49 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
-class User extends CI_Controller {
-
+class User extends CI_Controller{
+    public function __construct() {  
+		parent::__construct();   
+		$this->load->model('My_Model');  
+	} 
+    function login(){
+		$username = $this->input->post('username'); 
+		$password = $this->input->post('pass'); 
+		$isLogin = $this->My_Model->login_authen($username, $password); 
+		
+		$i = $this->My_Model->authen_user($username); 
+		
+		if ($isLogin == true && $i[0]['authentication'] < 3) {
+		  	redirect('MyController/loadAdmin');
+		} 
+		else{  
+			if ($i[0]['authentication'] < 3) {  
+				$update = $this->My_Model->wrong_password($username, $i[0]['authentication']+1); 
+				$data['err_message'] = "GAGAL LOGIN " . ($i[0]['authentication']+1);   
+				$this->load->view('login', $data);  
+			}  else{   
+				$data['err_message'] = "AKUN ANDA TERBLOCK";   
+				$this->load->view('login', $data);  
+					} 
+			}
+	}
     
-    public function index()
-    {
-        
-        $this->loginview();
-    }
+    function createAccount() {   
+		$data['err_message']="";
+		$this->load->view('signup',$data);
+	}
+	function createUser(){
+        $data = array( 
+        'first' => $this->input->post('first'),
+        'last' => $this->input->post('last'),  
+        'nohp' => $this->input->post('nohp'),
+        'email' => $this->input->post('email'),
+        'jeniskelamin' => $this->input->post('jeniskelamin'),
+        'username' => $this->input->post('username'),  
+        'password' => $this->input->post('pass')		
+        );
 
-    public function loginview() {
-        $this->load->view('login');
-    }
-    
-    public function regview() {
-        $this->load->view('register');
-    }
-       public function __construct() {
-        parent::__construct();
-                $this->load->model('User_model');
-    }
-
-            public function login() {
-		$email = $this->input->post('email');
-		$password = $this->input->post('password');
-		$isLogin = $this->User_model->login_authen($email,$password);
-            if($isLogin == true) {
-                $data_session =   array('email' => $email,
-                                        'status' => "login"
-                                        //'idCustomer' => $idLogin
-                                         );
-                $this->session->set_userdata($data_session);
-                redirect('Welcome');
-            } else {
-                $this->session->set_flashdata('error', 'password/username yang anda masukkan salah');
-                redirect('User/loginview');
-            }
-    }
-    
-    public function createUser()
-    {
-        $this->load->helper('form');
-        $this->load->library('form_validation');
-        $is_submit = $this->input->post('is_submit');
-                if(isset($is_submit) && $is_submit == 1) {
-                $data = array(
-                    'namaUser' => $this->input->post('nama'),
-                    'emailUser' => $this->input->post('email'),
-                    'passwordUser' => $this->input->post('password'),
-                    'alamatUser' => $this->input->post('alamat'),
-                    'pekerjaanUser' => $this->input->post('pekerjaan')
-                );
-            
-                $this->User_model->addUser($data);
-                redirect('User');
-                echo 'Selamat anda berhasil melakukan register';
-            } else {
-                $datauser['datauser'] = $this->User_model->getDataUser();
-                $this->load->view('register', $datauser);
-            }
-    }
-
-    public function Logout()
-    {
-        $this->session->sess_destroy();
-        redirect('login');
-    }
+        $this->My_Model->addAkun($data);   
+        $this->createAccount();
+	}
 }
+?>

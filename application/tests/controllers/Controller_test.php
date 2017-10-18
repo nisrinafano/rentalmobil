@@ -16,12 +16,10 @@ class Controller_test extends TestCase {
     
     public function test_login (){
          $output = $this->request(
-                'POST', ['MyController', 'login'], [
+                'POST', ['User', 'login'], [
                 'username' => 'admin',
                 'pass' => 'admin',
-                
                 ]
-             
         );
       //  $this->assertRedirect('login');
         $this->assertContains('<title>RENTAL MOBIL | Read Katalog</title>', $output);
@@ -29,8 +27,7 @@ class Controller_test extends TestCase {
     
     public function test_login1 (){
          $output = $this->request(
-                'POST', ['MyController', 'createUser'], [
-                            
+                'POST', ['User', 'createUser'], [
                 'first' => 'endar',  
                 'last' => 'sasmito',
                 'nohp' => '12213123',
@@ -43,19 +40,19 @@ class Controller_test extends TestCase {
         );
         $this->assertContains('<title>Sign Up</title>', $output);
         $this->request(
-                'POST',['MyController','login'],
+                'POST',['User','login'],
                 ['username' => 'admin123',
                 'pass' => 'admin12',
                 ]
             );
          $this->request(
-                'POST',['MyController','login'],
+                'POST',['User','login'],
                 ['username' => 'admin123',
                 'pass' => 'admin12',
                 ]
             );
           $this->request(
-                'POST',['MyController','login'],
+                'POST',['User','login'],
                 ['username' => 'admin123',
                 'pass' => 'admin12',
                 ]
@@ -65,8 +62,7 @@ class Controller_test extends TestCase {
     
     public function test_login2 (){
          $output = $this->request(
-                'POST', ['MyController', 'createUser'], [
-                            
+                'POST', ['User', 'createUser'], [
                 'first' => 'endar',  
                 'last' => 'sasmito',
                 'nohp' => '12213123',
@@ -79,7 +75,7 @@ class Controller_test extends TestCase {
         );
         $this->assertContains('<title>Sign Up</title>', $output);
         $this->request(
-                'POST',['MyController','login'],
+                'POST',['User','login'],
                 ['username' => 'admin12345',
                 'pass' => 'admin12',
                 ]
@@ -93,7 +89,6 @@ class Controller_test extends TestCase {
                 'POST', ['MyController', 'index'], [
                 'username' => 'admin',
                 'pass' => 'admin',
-                
                 ]
         );
         $this->assertContains('<h1 class="animated wow pulse" data-wow-delay=".5s"><a href="index.html">RENTAL<span>MOBIL</span></a></h1>', $output);
@@ -135,7 +130,6 @@ class Controller_test extends TestCase {
     public function test_order (){
          $output = $this->request(
                 'POST', ['MyController', 'order'], [
-                
                 ]
         );
         $this->assertContains('<ul class="dropdown-menu multi">', $output);
@@ -144,7 +138,6 @@ class Controller_test extends TestCase {
     public function test_adminorder (){
          $output = $this->request(
                 'POST', ['MyController', 'adminorder'], [
-                
                 ]
         );
         $this->assertContains('<div class="panel panel-default">', $output);
@@ -153,7 +146,6 @@ class Controller_test extends TestCase {
     public function test_admincontact (){
          $output = $this->request(
                 'POST', ['MyController', 'admincontact'], [
-                
                 ]
         );
         $this->assertContains('<a class="navbar-brand" href="#"><span>RENTAL MOBIL | </span>Admin</a>', $output);
@@ -178,7 +170,6 @@ class Controller_test extends TestCase {
     public function test_getdetail (){
          $output = $this->request(
                 'POST', ['MyController', 'getdetail','101'], [
-                
                 ]
         );
         $this->assertContains('<p > <h3>Nomor Polisi Kendaraan : </h3>N1234nm </p>', $output);
@@ -187,7 +178,6 @@ class Controller_test extends TestCase {
     public function test_getdetail2 (){
          $output = $this->request(
                 'POST', ['MyController', 'getdetail',], [
-                
                 ]
         );
         $this->assertContains('tidak ditemukan', $output);
@@ -203,16 +193,14 @@ class Controller_test extends TestCase {
     public function test_createcontact (){
          $output = $this->request(
                 'POST', ['MyController', 'createcontact',], [
-                
                 ]
         );
         $this->assertContains('<div class="clearfix"></div>', $output);
     }  
     
-     public function test_createorder (){
+    public function test_createorder (){
          $output = $this->request(
                 'POST', ['MyController', 'createorder',], [
-                
                 ]
         );
         $this->assertContains('<h1 class="animated wow pulse" data-wow-delay=".5s"><a href="index.html">Rental<span>Mobil</span></a></h1>', $output);
@@ -221,7 +209,7 @@ class Controller_test extends TestCase {
        
      public function test_createkatalog (){
          $output = $this->request(
-                'POST', ['MyController', 'createkatalog',], [
+                'POST', ['Kendaraan', 'createkatalog',], [
                 ]
         );
         $this->assertContains('<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>', $output);
@@ -238,7 +226,6 @@ class Controller_test extends TestCase {
     public function test_signup (){
          $output = $this->request(
                 'POST', ['MyController', 'signup',], [
-                
                 ]
         );
         $this->assertContains(' <input type="submit" name="submit" value="SIGN UP">', $output);
@@ -247,7 +234,6 @@ class Controller_test extends TestCase {
     public function test_contactus (){
          $output = $this->request(
                 'POST', ['MyController', 'contactus'], [
-                            
                 'nama' => 'endar',
                 'email' => 'endarsasmito1@gmail.com',  
                 'judul' => 'avanza',
@@ -260,8 +246,7 @@ class Controller_test extends TestCase {
     
     public function test_createuser (){
          $output = $this->request(
-                'POST', ['MyController', 'createUser'], [
-                            
+                'POST', ['User', 'createUser'], [
                 'first' => 'endar',  
                 'last' => 'sasmito',
                 'nohp' => '12213123',
@@ -278,17 +263,14 @@ class Controller_test extends TestCase {
      public function test_updatekatalog (){
          $output = $this->request(
                 'POST', ['MyController', 'updatekatalog'], [
-                            
                 "idKendaraan"=> '101',
-		"merkKendaraan"=> 'avanza',
-		"namaKendaraan"=> 'mobil',
-		"hargaSewa"=> '100000',
-			
-		"nopolKendaraan"=> 'N1234nm',
-		"idPemilik"=> '123',
-		
-		'fotoKendaraan' => '123',
-		'gambarbrg_model' => '123', 
+		      "merkKendaraan"=> 'avanza',
+                "namaKendaraan"=> 'mobil',
+                "hargaSewa"=> '100000',
+                "nopolKendaraan"=> 'N1234nm',
+                "idPemilik"=> '123',
+                'fotoKendaraan' => '123',
+                'gambarbrg_model' => '123', 
             ]
         );
         $this->assertContains('<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>', $output);
@@ -317,15 +299,13 @@ class Controller_test extends TestCase {
     
     public function test_create (){
          $output = $this->request(
-                'POST', ['MyController', 'create',], [
+                'POST', ['Kendaraan', 'create',], [
                     'idKendaraan' => '199',
                     'merkKendaraan' => 'tes',
                     'namaKendaraan' => 'tes',
                     "hargaSewa"=> '250000',
-			
                     "nopolKendaraan"=> 'N 4423 PI ',
                     "idPemilik"=> '2147483647',
-
                     'fotoKendaraan' => 'agya19.png',
                     'gambarbrg_model' => 'agya19.png', 
                 ]
